@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://CombatSystem/Background/steppes.png" type="Texture" id=1]
+[ext_resource path="res://newbackground.jpeg" type="Texture" id=1]
 [ext_resource path="res://CombatSystem/UserInterface/UILayer.gd" type="Script" id=2]
 [ext_resource path="res://CombatSystem/UserInterface/UIDamageLabel/UIDamageLabelBuilder.tscn" type="PackedScene" id=3]
 [ext_resource path="res://CombatSystem/UserInterface/UIActionMenu/UISelectBattlerArrow.tscn" type="PackedScene" id=4]
@@ -32,7 +32,11 @@ UIActionMenuScene = ExtResource( 16 )
 SelectArrow = ExtResource( 4 )
 
 [node name="Bear" parent="ActiveTurnQueue" instance=ExtResource( 9 )]
-position = Vector2( 1443.92, 775.934 )
+position = Vector2( 1404, 706 )
+scale = Vector2( -1, 1 )
+
+[node name="Bear2" parent="ActiveTurnQueue" instance=ExtResource( 9 )]
+position = Vector2( 1028, 990 )
 scale = Vector2( -1, 1 )
 
 [node name="BugCat" parent="ActiveTurnQueue" instance=ExtResource( 6 )]
@@ -56,4 +60,5 @@ margin_top = 232.0
 margin_bottom = -164.0
 
 [node name="UIDamageLabelBuilder" parent="UI" instance=ExtResource( 3 )]
+
 [connection signal="combat_ended" from="." to="UI" method="_on_CombatDemo_combat_ended"]
